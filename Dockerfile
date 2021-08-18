@@ -16,7 +16,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # set project environment variables
 # grab these via Python's os.environ
 # these are 100% optional here
-ENV PORT=8000
+# ENV PORT=8000
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -38,7 +38,5 @@ RUN pip3 install pipenv
 # Install project dependencies
 RUN pipenv install --skip-lock --system --dev
 
-
-COPY . .
-
-CMD [ "python3", "manage.py", "runserver", "0.0.0.0:8000"]
+# EXPOSE 8888
+CMD [gunicorn app.wsgi:application --bind 127.0.0.1:$PORT]
