@@ -1,5 +1,5 @@
 # delta-nlp-app
-FROM python:3.9
+FROM python:3.8-slim-buster
 
 # create and set working directory
 RUN mkdir /app
@@ -38,5 +38,7 @@ RUN pip3 install pipenv
 # Install project dependencies
 RUN pipenv install --skip-lock --system --dev
 
-EXPOSE 8888
-CMD gunicorn app.wsgi:application --bind 127.0.0.1:$PORT
+
+COPY . .
+
+CMD [ "python3", "manage.py", "runserver", "0.0.0.0:8000"]
