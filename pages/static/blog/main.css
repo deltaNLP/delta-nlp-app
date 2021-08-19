@@ -1,0 +1,130 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+
+
+.logo {
+  padding: 2.5vh 5vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: rgb(22, 8, 8);
+  text-transform: uppercase;
+  width: 30rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  min-height: 110vh;
+}
+
+.one,
+.four {
+  background-color: #fff;
+}
+
+.two {
+  background-color: rgb(238, 206, 99);
+}
+
+
+.five {
+  background-color: rgb(100, 145, 242);
+}
+
+
+
+h2.three,
+h2.four,
+h2.five {
+  color: #fff;
+}
+
+
+.project-cover {
+  height: 230px;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+.about-section {
+  margin-top: 0;
+  padding-top: 0;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 460px;
+}
+
+.auth-container {
+  margin-top: 0;
+  padding-top: 0;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container form {
+  min-width: 360px;
+}
+
+.btn,
+.btn-dark,
+.btn-light {
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+input[type=text], 
+input[type=email], 
+textarea {
+  width: 100%;
+  padding: 5px 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+ }
