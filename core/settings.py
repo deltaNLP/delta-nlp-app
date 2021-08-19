@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'wordcloud',
+    # 'wordcloud',
 ]
 
 MIDDLEWARE = [
@@ -139,32 +139,32 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-import spacy
-from youtube_transcript_api import YouTubeTranscriptApi
+# import spacy
+# from youtube_transcript_api import YouTubeTranscriptApi
 
-transcript = YouTubeTranscriptApi.get_transcript('OgYe6y8_Cx8')
+# transcript = YouTubeTranscriptApi.get_transcript('OgYe6y8_Cx8')
 
 
-SUPPORTED_LANGUAGES = ['en', 'de', 'es', 'pt', 'fr', 'it', 'nl']
+# SUPPORTED_LANGUAGES = ['en', 'de', 'es', 'pt', 'fr', 'it', 'nl']
 
-LANGUAGE_MODELS = {}
+# LANGUAGE_MODELS = {}
 
-for language in SUPPORTED_LANGUAGES:
-    try:
-        LANGUAGE_MODELS[language] = spacy.load(language)
-    except OSError:
-        print('Warning: model {} not found. Run python3 -m spacy download {} and try again.'.format(language,language))
+# for language in SUPPORTED_LANGUAGES:
+#     try:
+#         LANGUAGE_MODELS[language] = spacy.load(language)
+#     except OSError:
+#         print('Warning: model {} not found. Run python3 -m spacy download {} and try again.'.format(language,language))
 
-LANGUAGE_MODELS['en'] = spacy.load('en_core_web_sm')
+# LANGUAGE_MODELS['en'] = spacy.load('en_core_web_sm')
 
-# this is used to display the language name
-LANGUAGE_MAPPING = {
-        'el': 'Greek',
-        'en': 'English',
-        'de': 'German',
-        'es': 'Spanish',
-        'pt': 'Portuguese',
-        'fr': 'French',
-        'it': 'Italian',
-        'nl': 'Dutch',
-}
+# # this is used to display the language name
+# LANGUAGE_MAPPING = {
+#         'el': 'Greek',
+#         'en': 'English',
+#         'de': 'German',
+#         'es': 'Spanish',
+#         'pt': 'Portuguese',
+#         'fr': 'French',
+#         'it': 'Italian',
+#         'nl': 'Dutch',
+# }
