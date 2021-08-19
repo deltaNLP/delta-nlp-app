@@ -9,14 +9,14 @@ services:
     image: app:delta_nlp
     container_name: delta_nlp_container
     command: python manage.py runserver 0.0.0.0:8000
-    depends_on:
-      - db 
-  db:
-    image: postgres
-    volumes:
-      - ./data/db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=delta_nlp
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    container_name: delta_pg_db
+  #   depends_on:
+  #     - db 
+  # db:
+  #   image: postgres
+  #   volumes:
+  #     - ./data/db:/var/lib/postgresql/data
+  #   environment:
+  #     - POSTGRES_DB=delta_nlp
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres
+  #   container_name: delta_pg_db
